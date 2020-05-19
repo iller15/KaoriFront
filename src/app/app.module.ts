@@ -13,6 +13,8 @@ import { PaginaInicioComponent } from './pagina-inicio/pagina-inicio.component';
 import { RegistarSerieComponent } from './registar-serie/registar-serie.component';
 import { RegistarTemporadaComponent } from './registar-temporada/registar-temporada.component';
 import { RegistarCapituloComponent } from './registar-capitulo/registar-capitulo.component';
+import { MostrarArticuloComponent } from './mostrar-articulo/mostrar-articulo.component';
+import { ListarArticuloComponent } from './listar-articulo/listar-articulo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { RegistarCapituloComponent } from './registar-capitulo/registar-capitulo
     PaginaInicioComponent,
     RegistarSerieComponent,
     RegistarTemporadaComponent,
-    RegistarCapituloComponent
+    RegistarCapituloComponent,
+    MostrarArticuloComponent,
+    ListarArticuloComponent
   ],
   imports: [
     BrowserModule,

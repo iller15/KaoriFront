@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaInicioComponent implements OnInit {
 
+  algo : number = 12;
   constructor() { }
 
   ngOnInit(): void {

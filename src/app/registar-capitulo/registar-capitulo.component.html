@@ -1,15 +1,12 @@
 <h3>Registro de Capitulo</h3>
 <div>
     <form (ngSubmit) = "registrar()"> 
+        
+        <!-- Deberia haber un scroll down de temporada y serie-->    
         <div class="form-group">
-            
-            <label for="idCapitulo">Id del Capitulo</label>
-             <input type="text" class="form-control" id="idCapitulo" [(ngModel)]="capitulo.idCapitulo" name="idCapitulo" required #idCapitulo = "ngModel">
-             <div class="alert alert-danger" *nflf="idCapitulo.invalid && (idCapitulo.dirty || idCapitulo.touched)">
-                <div *nglf="idCapitulo.errors.required">
-                    El id del capitulo es requerido.
-                </div>
-            </div>
+            <label for="temporada">Temporada</label>
+             <input type="text" class="form-control" id="temporada" [(ngModel)]="capitulo.temporada" name="temporada">
+        </div>   
         
         <div class="form-group">
             <label for="tituloCapitulo">Titulo del Capitulo</label>
@@ -17,15 +14,10 @@
         </div>
 
         <div class="form-group">
-            <label for="temporada">Temporada</label>
-             <input type="text" class="form-control" id="temporada" [(ngModel)]="capitulo.temporada" name="temporada">
-        </div>
-
-        <div class="form-group">
             <button type="submit" class="button" >Registrar</button>
         </div>
 
-    </div>
+    
     </form>
 
 
