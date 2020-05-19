@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ManejoAdminComponent } from './manejo-admin/manejo-admin.component';
 import { PaginaInicioComponent } from './pagina-inicio/pagina-inicio.component';
+import { RegistarSerieComponent } from './registar-serie/registar-serie.component';
+import { RegistarTemporadaComponent } from './registar-temporada/registar-temporada.component';
+import { RegistarCapituloComponent } from './registar-capitulo/registar-capitulo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { PaginaInicioComponent } from './pagina-inicio/pagina-inicio.component';
     RegistrarSnippetComponent,
     ListarSnippetsComponent,
     ManejoAdminComponent,
-    PaginaInicioComponent
+    PaginaInicioComponent,
+    RegistarSerieComponent,
+    RegistarTemporadaComponent,
+    RegistarCapituloComponent
   ],
   imports: [
     BrowserModule,

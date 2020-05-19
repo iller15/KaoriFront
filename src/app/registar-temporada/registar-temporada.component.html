@@ -1,0 +1,39 @@
+<h3>Registro de Temporada</h3>
+<div>
+    <form (ngSubmit) = "registrar()"> 
+        <div class="form-group">
+            
+            <label for="numTemporada">Numero de Temporada</label>
+             <input type="text" class="form-control" id="numTemporada" [(ngModel)]="temporada.numTemporada" name="numTemporada" required #numTemporada = "ngModel">
+             <div class="alert alert-danger" *nflf="numTemporada.invalid && (numTemporada.dirty || numTemporada.touched)">
+                <div *nglf="numTemporada.errors.required">
+                    El numero de temporada es requerido
+                </div>
+            </div>
+        
+        <div class="form-group">
+            <label for="fechaInicio">Fecha de Inicio</label>
+             <input type="text" class="form-control" id="fechaInicio" [(ngModel)]="temporada.fechaInicio" name="fechaInicio">
+        </div>
+
+        <div class="form-group">
+            <label for="fechaFinal">fechaFinal</label>
+             <input type="fechaFinal" class="form-control" id="fechaFinal" [(ngModel)]="temporada.fechaFinal" name="fechaFinal">
+        </div>
+
+        <div class="form-group">
+            <label for="serie">Serie</label>
+             <input type="serie" class="form-control" id="serie" [(ngModel)]="temporada.serie" name="serie">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="button" >Registrar</button>
+        </div>
+
+    </div>
+    </form>
+
+
+
+
+</div>
