@@ -1,25 +1,42 @@
+<!doctype html> 
+
 <p>registrar-snippet works!</p>
 <h3>Registro de Snippets</h3>
 <div>
     <form (ngSubmit) = "registrar()"> 
         <div class="form-group">
-            <label for="description">Codigo</label>
-            <input type="text" class="form-control" id="description" [(ngModel)]="snippet.description" name="description"
-                required #description ="ngModel">
-            <div class="alert alert-danger" *nflf="description.invalid && (description.dirty || description.touched)">
-                <div *nglf="description.errors.required">
-                    Descripcion es requerida
+            <label for="texto">Texto</label>
+             <input type="text" class="form-control" id="texto" [(ngModel)]="snippet.texto" name="texto" required #texto = "ngModel">
+             <div class="alert alert-danger" *nflf="texto.invalid && (texto.dirty || texto.touched)">
+                <div *nglf="texto.errors.required">
+                    Texto es requerido
                 </div>
             </div>
-        </div>
+        
+
         <div class="form-group">
-            <label for="texto">Texto</label>
-             <input type="text" class="form-control" id="texto" [(ngModel)]="snippet.texto" name="texto">
+            <label for="idCapitulo">Id Capitulo</label>
+             <input type="text" class="form-control" id="idCapitulo" [(ngModel)]="snippet.idCapitulo" name="idCapitulo">
         </div>
+
+        <div class="form-group">
+            <label for="personajes">Personajes</label>
+             <input type="personajes" class="form-control" id="personajes" [(ngModel)]="snippet.personajes" name="personajes">
+        </div>
+
+        <div class="form-group">
+            <label for="articulos">Articulos</label>
+             <input type="articulos" class="form-control" id="articulos" [(ngModel)]="snippet.articulos" name="articulos">
+        </div>
+
         <div class="form-group">
             <button type="submit" class="btn btn-success">Registrar</button>
         </div>
 
-
+    </div>
     </form>
+
+
+
+
 </div>

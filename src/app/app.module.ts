@@ -8,12 +8,16 @@ import { ListarSnippetsComponent } from './listar-snippets/listar-snippets.compo
 //call rest 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ManejoAdminComponent } from './manejo-admin/manejo-admin.component';
+import { PaginaInicioComponent } from './pagina-inicio/pagina-inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrarSnippetComponent,
-    ListarSnippetsComponent
+    ListarSnippetsComponent,
+    ManejoAdminComponent,
+    PaginaInicioComponent
   ],
   imports: [
     BrowserModule,
