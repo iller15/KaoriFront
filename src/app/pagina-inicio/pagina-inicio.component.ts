@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Snippet } from '../model/snippet';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pagina-inicio',
@@ -6,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagina-inicio.component.css']
 })
 export class PaginaInicioComponent implements OnInit {
-
-  algo : number = 12;
-  constructor() { }
-
+  constructor() { 
+      
+    }
   ngOnInit(): void {
   }
 

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators'; //para llamar rest
 import { Snippet } from './model/snippet';
 import { Observable } from 'rxjs';
+import { Articulo } from './model/articulo';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,17 @@ export class KaoriService {
     return this.http.get(this.urlBase+"listSnippet").pipe( // se supone que se usa para llamar sin usar streams de java
       map(response => response as Snippet[])
     )
+  }
+
+  obtenerArticulo(idArticulo): Observable<any>{
+    return this.http.get(this.urlBase + "/articulo-" +idArticulo).pipe(
+      map(response => response as Articulo)
+    )
+  }
+
+  mostrarSnippetsFiltrados(idArticulo:String, idCapitulo:String): Observable<any>{
+    return this.http.get(this.urlBase + "/articulo-"+idArticulo+"-"+idCapitulo).pipe(
+      map(response => response as Snippet[]))
   }
 
 }
