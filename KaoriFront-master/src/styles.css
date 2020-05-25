@@ -2,13 +2,11 @@
 .navbar {
     background-color: rgb(180, 211, 188);
     overflow: hidden;
-    
   }
 
   .navbar-header {
     background-color: rgb(154, 247, 177);
     color: black;
-    text-align: center;
   }
 
   .navbar-nav {
