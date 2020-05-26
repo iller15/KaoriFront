@@ -1,0 +1,37 @@
+<h3>Registro de Snippets</h3>
+<div>
+    <form (ngSubmit) = "registrar()"> 
+        <div class="form-group">
+            
+            <label for="texto">Texto</label>
+             <input type="text" class="form-control" id="texto" [(ngModel)]="snippet.texto" name="texto" required #texto = "ngModel">
+             <div class="alert alert-danger" *nflf="texto.invalid && (texto.dirty || texto.touched)">
+                <div *nglf="texto.errors.required">
+                    Texto es requerido
+                </div>
+            </div>
+        
+        <div class="form-group">
+            <label for="idCapitulo">Id Capitulo</label>
+             <input type="text" class="form-control" id="idCapitulo" [(ngModel)]="snippet.idCapitulo" name="idCapitulo">
+        </div>
+
+        <!-- poner opcion para agregar varios personajes  -->
+        <div class="form-group">
+            <label for="personajes">Personajes</label>
+             <input type="personajes" class="form-control" id="personajes" [(ngModel)]="snippet.personajes" name="personajes">
+        </div>
+        
+
+
+        <div class="form-group">
+            <button type="submit" class="button" >Registrar</button>
+        </div>
+
+    </div>
+    </form>
+
+
+
+
+</div>
