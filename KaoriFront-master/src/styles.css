@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.navbar {
+    background-color: rgb(180, 211, 188);
+    overflow: hidden;
+  }
+
+  .navbar-header {
+    background-color: rgb(154, 247, 177);
+    color: black;
+  }
+
+  .navbar-nav {
+    background-color: rgb(167, 211, 178);
+    color: rgb(197, 112, 247);
+  }
+
+  .container {
+    background-color: rgb(167, 211, 178);
+    color: black;
+    text-align: center;
+  }
