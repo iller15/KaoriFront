@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Snippet } from '../model/snippet';
+import { KaoriService } from '../kaori.service';
 
 @Component({
   selector: 'app-listar-snippets',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarSnippetsComponent implements OnInit {
 
-  constructor() { }
+  snippets: Observable<Snippet[]>
+
+  constructor(private kaoriService: KaoriService ) {   }
 
   ngOnInit(): void {
+    this.cargarData();
   }
-
+  cargarData(){
+    console.log("Llamando al Servicio");
+    this.kaoriService.listSnippet().subscribe(
+      snippets => this.snippets = snippets
+    )
+  }
 }

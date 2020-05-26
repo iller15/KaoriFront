@@ -20,7 +20,8 @@ export class KaoriService {
   }
 
   listSnippet(): Observable<any> {
-    return this.http.get(this.urlBase+"listSnippet").pipe( // se supone que se usa para llamar sin usar streams de java
+    console.log(this.urlBase + "/listSnippet");
+    return this.http.get(this.urlBase + "/listSnippet").pipe( // se supone que se usa para llamar sin usar streams de java
       map(response => response as Snippet[])
     )
   }
