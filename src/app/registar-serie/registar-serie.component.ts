@@ -18,7 +18,9 @@ export class RegistarSerieComponent implements OnInit {
   }
 
   registrar():void{
-
+    this.kaoriService.regSerie(this.serie).subscribe(data => this.router.navigate(['/listSerie'])
+    );
+    
   }
 
 }

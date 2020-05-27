@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators'; //para llamar rest
 import { Snippet } from './model/snippet';
-import { Observable } from 'rxjs';
+import { Observable, observable } from 'rxjs';
 import { Articulo } from './model/articulo';
+import { Temporada } from './model/temporada';
+import { Serie } from './model/serie';
 
 @Injectable({
   providedIn: 'root'
@@ -15,34 +17,46 @@ export class KaoriService {
 
   //aqui van todas las funciones del rest.
 
+//SNIPPET
+
   regSnippet(snippet : Snippet) : Observable<any> {
     console.log(this.urlBase+ "/snippet");
     return this.http.post(this.urlBase + "/snippet", snippet,{headers: this.httpHeaders});
   }
 
   listSnippet(): Observable<any> {
-    return this.http.get(this.urlBase+"listSnippet").pipe( // se supone que se usa para llamar sin usar streams de java
+    return this.http.get(this.urlBase+"/listSnippet").pipe( // se supone que se usa para llamar sin usar streams de java
       map(response => response as Snippet[])
     )
   }
 
-  regSerie(){
+//SERIES
 
+  regSerie(serie : Serie) : Observable<any>{
+    console.log(this.urlBase+"/regSerie");
+    return this.http.post(this.urlBase+ "/regSerie",serie, {headers:this.httpHeaders});
   }
-  listSerie(){
-      
+  listSerie(): Observable<any>{
+    console.log(this.urlBase+"/listSerie");
+    return this.http.get(this.urlBase + "/listSerie").pipe(map(response => response as Snippet[]))
   }
-  regTemporada(){
 
+//TEMPORADAS
+
+  regTemporada(temporada : Temporada, idSerie: string): Observable<any>{
+    console.log(this.urlBase+"/regTemporada-{idSerie}");
+    return this.http.post(this.urlBase + "/regTemporada-" + idSerie, temporada, {headers: this.httpHeaders});
   }
+
+//CAPITULOS
   regCapitulo(){
 
-  }n
+  }
   listCapitulo(){
 
   }
 
-
+//ARTICULO
 
   obtenerArticulo(idArticulo): Observable<any>{
     return this.http.get(this.urlBase + "/articulo-" +idArticulo).pipe(
