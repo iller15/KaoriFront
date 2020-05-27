@@ -44,7 +44,7 @@ export class KaoriService {
 //TEMPORADAS
 
   regTemporada(temporada : Temporada, idSerie: string): Observable<any>{
-    console.log(this.urlBase+"/regTemporada-{idSerie}");
+    console.log(this.urlBase+"/regTemporada");
     return this.http.post(this.urlBase + "/regTemporada-" + idSerie, temporada, {headers: this.httpHeaders});
   }
 

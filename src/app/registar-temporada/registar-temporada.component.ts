@@ -10,8 +10,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./registar-temporada.component.css']
 })
 export class RegistarTemporadaComponent implements OnInit {
+  //las variables de la clase se actualizan segun las escribes en el las casillas
 
   temporada : Temporada = new Temporada();
+  idSerie: string;
 
   constructor(private kaoriService: KaoriService, private router: Router) { }
 
@@ -19,7 +21,7 @@ export class RegistarTemporadaComponent implements OnInit {
   }
 
   registrar():void{
-    
+    this.kaoriService.regTemporada(this.temporada,this.idSerie);
   }
 
 }
