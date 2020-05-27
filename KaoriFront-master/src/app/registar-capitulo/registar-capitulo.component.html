@@ -1,0 +1,27 @@
+<h3>Registro de Capitulo</h3>
+<div>
+    <form (ngSubmit) = "registrar()"> 
+        
+        <!-- Deberia haber un scroll down de temporada y serie-->    
+        <div class="form-group">
+            <label for="temporada">Temporada</label>
+             <input type="text" class="form-control" id="temporada" [(ngModel)]="capitulo.temporada" name="temporada">
+        </div>   
+        
+        <div class="form-group">
+            <label for="tituloCapitulo">Titulo del Capitulo</label>
+             <input type="text" class="form-control" id="tituloCapitulo" [(ngModel)]="capitulo.tituloCapitulo" name="tituloCapitulo">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="button" >Registrar</button>
+        </div>
+
+    
+    </form>
+
+
+
+
+</div>
+
