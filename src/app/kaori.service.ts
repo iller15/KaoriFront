@@ -26,6 +26,24 @@ export class KaoriService {
     )
   }
 
+  regSerie(){
+
+  }
+  listSerie(){
+      
+  }
+  regTemporada(){
+
+  }
+  regCapitulo(){
+
+  }n
+  listCapitulo(){
+
+  }
+
+
+
   obtenerArticulo(idArticulo): Observable<any>{
     return this.http.get(this.urlBase + "/articulo-" +idArticulo).pipe(
       map(response => response as Articulo)
