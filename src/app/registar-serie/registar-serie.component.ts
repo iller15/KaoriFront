@@ -17,10 +17,9 @@ export class RegistarSerieComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registrar():void{
+  registrar():void{                                                                 //aqui debe ir el "link" al componente listar serie
     this.kaoriService.regSerie(this.serie).subscribe(data => this.router.navigate(['/listSerie'])
     );
-    
   }
 
 }

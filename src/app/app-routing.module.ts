@@ -6,6 +6,7 @@ import { PaginaInicioComponent } from './pagina-inicio/pagina-inicio.component';
 import { RegistarSerieComponent } from './registar-serie/registar-serie.component';
 import { RegistarTemporadaComponent } from './registar-temporada/registar-temporada.component';
 import { RegistarCapituloComponent } from './registar-capitulo/registar-capitulo.component';
+import { ListarSerieComponent } from './listar-serie/listar-serie.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'manejoAdmin', component: ManejoAdminComponent},
   {path: 'regSerie', component: RegistarSerieComponent},
   {path: 'regTemporada', component: RegistarTemporadaComponent},
-  {path: 'regCapitulo', component: RegistarCapituloComponent}
+  {path: 'regCapitulo', component: RegistarCapituloComponent},
+  {path: 'listSerie', component: ListarSerieComponent}
 
 
 

@@ -37,8 +37,8 @@ export class KaoriService {
     return this.http.post(this.urlBase+ "/regSerie",serie, {headers:this.httpHeaders});
   }
   listSerie(): Observable<any>{
-    console.log(this.urlBase+"/listSerie");
-    return this.http.get(this.urlBase + "/listSerie").pipe(map(response => response as Snippet[]))
+    console.log(this.urlBase+"/listSeries");
+    return this.http.get(this.urlBase + "/listSeries").pipe(map(response => response as Serie[]))
   }
 
 //TEMPORADAS

@@ -15,6 +15,7 @@ import { RegistarTemporadaComponent } from './registar-temporada/registar-tempor
 import { RegistarCapituloComponent } from './registar-capitulo/registar-capitulo.component';
 import { MostrarArticuloComponent } from './mostrar-articulo/mostrar-articulo.component';
 import { ListarArticuloComponent } from './listar-articulo/listar-articulo.component';
+import { ListarSerieComponent } from './listar-serie/listar-serie.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ListarArticuloComponent } from './listar-articulo/listar-articulo.compo
     RegistarTemporadaComponent,
     RegistarCapituloComponent,
     MostrarArticuloComponent,
-    ListarArticuloComponent
+    ListarArticuloComponent,
+    ListarSerieComponent
   ],
   imports: [
     BrowserModule,
