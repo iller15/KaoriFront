@@ -50,7 +50,7 @@ export class KaoriService {
 
 //CAPITULOS
   regCapitulo(){
-
+    
   }
   listCapitulo(){
 
